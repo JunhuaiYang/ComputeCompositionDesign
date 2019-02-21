@@ -1,0 +1,1107 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Thu Feb 21 19:01:54 2019
+| Host         : Junhuai running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file MipsCPU_Top_control_sets_placed.rpt
+| Design       : MipsCPU_Top
+| Device       : xc7a100t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |  1039 |
+| Unused register locations in slices containing registers |    46 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      5 |            1 |
+|      6 |            1 |
+|      8 |            1 |
+|    16+ |         1035 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              58 |           36 |
+| No           | No                    | Yes                    |               1 |            1 |
+| No           | Yes                   | No                     |             143 |           47 |
+| Yes          | No                    | No                     |            1504 |          617 |
+| Yes          | No                    | Yes                    |             160 |           52 |
+| Yes          | Yes                   | No                     |           31240 |        13740 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+------------------------------------+-------------------------------------------+------------------+----------------+
+|            Clock Signal           |            Enable Signal           |              Set/Reset Signal             | Slice Load Count | Bel Load Count |
++-----------------------------------+------------------------------------+-------------------------------------------+------------------+----------------+
+|  clk_BUFG                         |                                    | enable_pc/pc_enable_reg/rst_in            |                1 |              1 |
+|  clk_BUFG                         | contorller/memory_reg[840][23]_0   | contorller/memory_reg[840][25]            |                4 |              5 |
+|  rawClk_IBUF_BUFG                 |                                    |                                           |                3 |              6 |
+|  clk_BUFG                         | contorller/memory_reg[232][31]_0   | contorller/memory_reg[232][1]             |                7 |              8 |
+|  clk_BUFG                         |                                    |                                           |               17 |             24 |
+|  clk_BUFG                         | contorller/memory_reg[232][31]_0   | contorller/memory_reg[232][31]            |                9 |             24 |
+|  clk_BUFG                         | contorller/memory_reg[840][23]_0   | contorller/memory_reg[840][23]            |               15 |             24 |
+|  pc_path/pc_reg/data_out_reg[0]_0 |                                    |                                           |               16 |             28 |
+|  clk_BUFG                         | contorller/memory_reg[272][28]_0   | contorller/memory_reg[272][28]            |                9 |             29 |
+|  clk_BUFG                         | contorller/memory_reg[443][31]     | contorller/memory_reg[443][0]_2           |               15 |             30 |
+|  clk_BUFG                         | contorller/memory_reg[580][30]     | contorller/memory_reg[580][0]             |               15 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[363][30]_0   | contorller/memory_reg[363][30]            |                9 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[608][30]     | contorller/memory_reg[608][0]             |               15 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[592][30]     | contorller/memory_reg[592][0]             |               14 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[414][30]     | contorller/memory_reg[414][0]             |               14 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[161][30]_0   | contorller/memory_reg[161][30]            |               10 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[233][30]     | contorller/memory_reg[233][0]             |                9 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[609][30]_0   | contorller/memory_reg[609][30]            |               11 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[328][30]     | contorller/memory_reg[328][0]             |                9 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[249][30]_0   | contorller/memory_reg[249][30]            |               11 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[371][30]_0   | contorller/memory_reg[371][30]            |               12 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[68][30]      | contorller/memory_reg[68][0]              |               17 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[697][30]     | contorller/memory_reg[697][0]             |               15 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[737][30]     | contorller/memory_reg[737][0]             |               11 |             31 |
+|  rawClk_IBUF_BUFG                 |                                    | led_display/display_divider/clk_N         |                8 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[921][30]_0   | contorller/memory_reg[921][30]            |               16 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[946][30]_0   | contorller/memory_reg[946][30]            |               15 |             31 |
+|  rawClk_IBUF_BUFG                 |                                    | clock_divider/clk_N                       |                8 |             31 |
+|  rawClk_IBUF_BUFG                 |                                    | s_divider/clk_N                           |                8 |             31 |
+|  clk_BUFG                         | contorller/memory_reg[1008][31]_0  | contorller/memory_reg[1008][31]           |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[100][31]_0   | contorller/memory_reg[100][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1009][31]_0  | contorller/memory_reg[1009][31]           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1014][31]_0  | contorller/memory_reg[1014][31]           |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1015][31]    | contorller/memory_reg[1015][0]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1011][31]    | contorller/memory_reg[1011][0]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1013][31]_0  | contorller/memory_reg[1013][31]           |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1012][31]_0  | contorller/memory_reg[1012][31]           |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1016][31]_0  | contorller/memory_reg[1016][0]_0          |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1017][31]    | contorller/memory_reg[1017][0]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[101][31]_0   | contorller/memory_reg[101][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1018][31]    | contorller/memory_reg[1018][0]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1019][31]    | contorller/memory_reg[1019][0]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1020][31]    | contorller/memory_reg[1020][0]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[102][31]     | contorller/memory_reg[102][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1022][31]_0  | contorller/memory_reg[1022][31]           |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1021][31]_0  | contorller/memory_reg[1021][31]           |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1023][31]    | contorller/memory_reg[1023][0]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[105][31]     | contorller/memory_reg[105][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[106][31]     | contorller/memory_reg[106][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[107][31]     | contorller/memory_reg[107][0]             |               24 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[103][31]_0   | contorller/memory_reg[103][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[104][31]     | contorller/memory_reg[104][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[110][31]     | contorller/memory_reg[110][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[108][31]_0   | contorller/memory_reg[108][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[109][31]     | contorller/memory_reg[109][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[112][31]_0   | contorller/memory_reg[112][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[113][31]_1   | contorller/memory_reg[113][31]_0          |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[114][31]_0   | contorller/memory_reg[114][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[115][31]_0   | contorller/memory_reg[115][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[111][31]_0   | contorller/memory_reg[111][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[124][31]     | contorller/memory_reg[124][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[122][31]_0   | contorller/memory_reg[122][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[116][31]_0   | contorller/memory_reg[116][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[123][31]_1   | contorller/memory_reg[123][31]_0          |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[120][31]     | contorller/memory_reg[120][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[121][31]_0   | contorller/memory_reg[121][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[118][31]_0   | contorller/memory_reg[118][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[117][31]_0   | contorller/memory_reg[117][31]            |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[125][31]_0   | contorller/memory_reg[125][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[119][31]_1   | contorller/memory_reg[119][31]_0          |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[127][31]_0   | contorller/memory_reg[127][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[126][31]_0   | contorller/memory_reg[126][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[131][31]     | contorller/memory_reg[131][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[129][31]_0   | contorller/memory_reg[129][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[130][31]_0   | contorller/memory_reg[130][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[128][31]_0   | contorller/memory_reg[128][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[133][31]_0   | contorller/memory_reg[133][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[136][31]_0   | contorller/memory_reg[136][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[134][31]_0   | contorller/memory_reg[134][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[132][31]_0   | contorller/memory_reg[132][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[135][31]     | contorller/memory_reg[135][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[137][31]_0   | contorller/memory_reg[137][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[138][31]_0   | contorller/memory_reg[138][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[139][31]     | contorller/memory_reg[139][0]             |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[141][31]     | contorller/memory_reg[141][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[144][31]     | contorller/memory_reg[144][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[143][31]     | contorller/memory_reg[143][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[145][31]     | contorller/memory_reg[145][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[146][31]     | contorller/memory_reg[146][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[140][31]     | contorller/memory_reg[140][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[142][31]     | contorller/memory_reg[142][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[150][31]_0   | contorller/memory_reg[150][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[148][31]     | contorller/memory_reg[148][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[151][31]     | contorller/memory_reg[151][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[155][31]_0   | contorller/memory_reg[155][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[158][31]     | contorller/memory_reg[158][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[159][31]_0   | contorller/memory_reg[159][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[15][31]_0    | contorller/memory_reg[15][31]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[152][31]_0   | contorller/memory_reg[152][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[14][31]_0    | contorller/memory_reg[14][31]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[154][31]     | contorller/memory_reg[154][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[153][31]_0   | contorller/memory_reg[153][31]            |               21 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[157][31]_0   | contorller/memory_reg[157][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[160][31]_0   | contorller/memory_reg[160][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[147][31]     | contorller/memory_reg[147][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[156][31]     | contorller/memory_reg[156][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[149][31]     | contorller/memory_reg[149][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[164][31]_0   | contorller/memory_reg[164][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[163][31]     | contorller/memory_reg[163][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[162][31]     | contorller/memory_reg[162][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[167][31]     | contorller/memory_reg[167][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[165][31]_0   | contorller/memory_reg[165][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[166][31]_0   | contorller/memory_reg[166][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[303][31]_0   | contorller/memory_reg[303][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[308][31]     | contorller/memory_reg[308][0]             |               23 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[306][31]_0   | contorller/memory_reg[306][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[304][31]     | contorller/memory_reg[304][0]             |               24 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[305][31]_0   | contorller/memory_reg[305][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[307][31]_0   | contorller/memory_reg[307][31]            |               22 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[310][31]     | contorller/memory_reg[310][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[319][31]     | contorller/memory_reg[319][0]             |               25 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[315][31]     | contorller/memory_reg[315][0]             |               21 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[309][31]_0   | contorller/memory_reg[309][31]            |               21 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[313][31]     | contorller/memory_reg[313][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[320][31]     | contorller/memory_reg[320][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[322][31]     | contorller/memory_reg[322][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[318][31]     | contorller/memory_reg[318][0]             |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[325][31]     | contorller/memory_reg[325][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[312][31]     | contorller/memory_reg[312][0]             |               26 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[326][31]_0   | contorller/memory_reg[326][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[327][31]     | contorller/memory_reg[327][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[314][31]     | contorller/memory_reg[314][0]             |               25 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[311][31]     | contorller/memory_reg[311][0]             |               25 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[316][31]     | contorller/memory_reg[316][0]             |               25 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[317][31]     | contorller/memory_reg[317][0]             |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[321][31]     | contorller/memory_reg[321][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[323][31]     | contorller/memory_reg[323][0]             |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[324][31]     | contorller/memory_reg[324][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[330][31]_0   | contorller/memory_reg[330][31]            |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[331][31]_0   | contorller/memory_reg[331][31]            |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[332][31]_0   | contorller/memory_reg[332][31]            |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[329][31]_0   | contorller/memory_reg[329][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[169][31]     | contorller/memory_reg[169][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[16][31]_0    | contorller/memory_reg[16][31]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[168][31]     | contorller/memory_reg[168][31]_0          |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[170][31]     | contorller/memory_reg[170][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[171][31]     | contorller/memory_reg[171][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[174][31]     | contorller/memory_reg[174][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[176][31]_0   | contorller/memory_reg[176][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[179][31]_0   | contorller/memory_reg[179][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[173][31]     | contorller/memory_reg[173][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[180][31]_0   | contorller/memory_reg[180][31]            |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[181][31]_0   | contorller/memory_reg[181][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[182][31]_0   | contorller/memory_reg[182][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[183][31]_0   | contorller/memory_reg[183][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[178][31]_0   | contorller/memory_reg[178][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[172][31]     | contorller/memory_reg[172][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[175][31]_0   | contorller/memory_reg[175][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[177][31]_0   | contorller/memory_reg[177][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[184][31]_0   | contorller/memory_reg[184][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[185][31]     | contorller/memory_reg[185][31]_0          |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[186][31]     | contorller/memory_reg[186][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[188][31]_0   | contorller/memory_reg[188][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[187][31]_0   | contorller/memory_reg[187][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[189][31]_0   | contorller/memory_reg[189][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[190][31]_0   | contorller/memory_reg[190][0]_0           |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[192][31]_0   | contorller/memory_reg[192][0]_0           |               21 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[191][31]     | contorller/memory_reg[191][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[194][31]_0   | contorller/memory_reg[194][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[193][31]     | contorller/memory_reg[193][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[195][31]_0   | contorller/memory_reg[195][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[197][31]_0   | contorller/memory_reg[197][31]            |               23 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[200][31]     | contorller/memory_reg[200][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[196][31]_0   | contorller/memory_reg[196][0]_0           |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[198][31]     | contorller/memory_reg[198][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[199][31]     | contorller/memory_reg[199][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[211][31]     | contorller/memory_reg[211][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[212][31]_0   | contorller/memory_reg[212][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[205][31]     | contorller/memory_reg[205][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[213][31]_0   | contorller/memory_reg[213][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[216][31]     | contorller/memory_reg[216][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[206][31]     | contorller/memory_reg[206][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[208][31]     | contorller/memory_reg[208][0]             |               21 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[202][31]_0   | contorller/memory_reg[202][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[207][31]     | contorller/memory_reg[207][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[210][31]     | contorller/memory_reg[210][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[214][31]_0   | contorller/memory_reg[214][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[215][31]_0   | contorller/memory_reg[215][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[203][31]_0   | contorller/memory_reg[203][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[201][31]_0   | contorller/memory_reg[201][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[204][31]_0   | contorller/memory_reg[204][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[209][31]_0   | contorller/memory_reg[209][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[217][31]_0   | contorller/memory_reg[217][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[224][31]_0   | contorller/memory_reg[224][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[220][31]_0   | contorller/memory_reg[220][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[218][31]     | contorller/memory_reg[218][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[221][31]_0   | contorller/memory_reg[221][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[219][31]     | contorller/memory_reg[219][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[222][31]     | contorller/memory_reg[222][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[223][31]_0   | contorller/memory_reg[223][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[226][31]_0   | contorller/memory_reg[226][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[225][31]_0   | contorller/memory_reg[225][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[227][31]_1   | contorller/memory_reg[227][31]_0          |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[228][31]_0   | contorller/memory_reg[228][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[230][31]_0   | contorller/memory_reg[230][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[229][31]_0   | contorller/memory_reg[229][31]            |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[231][31]     | contorller/memory_reg[231][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[238][31]_0   | contorller/memory_reg[238][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[239][31]_0   | contorller/memory_reg[239][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[234][31]_0   | contorller/memory_reg[234][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[237][31]_0   | contorller/memory_reg[237][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[235][31]     | contorller/memory_reg[235][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[236][31]_0   | contorller/memory_reg[236][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[241][31]     | contorller/memory_reg[241][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[242][31]_0   | contorller/memory_reg[242][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[240][31]_0   | contorller/memory_reg[240][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[244][31]_0   | contorller/memory_reg[244][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[245][31]_0   | contorller/memory_reg[245][0]_0           |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[243][31]_0   | contorller/memory_reg[243][0]_0           |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[251][31]_0   | contorller/memory_reg[251][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[253][31]_0   | contorller/memory_reg[253][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[255][31]_0   | contorller/memory_reg[255][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[246][31]     | contorller/memory_reg[246][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[247][31]_0   | contorller/memory_reg[247][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[252][31]_0   | contorller/memory_reg[252][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[254][31]     | contorller/memory_reg[254][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[256][31]_0   | contorller/memory_reg[256][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[248][31]_0   | contorller/memory_reg[248][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[250][31]     | contorller/memory_reg[250][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[260][31]_0   | contorller/memory_reg[260][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[261][31]_0   | contorller/memory_reg[261][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[259][31]_0   | contorller/memory_reg[259][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[257][31]_0   | contorller/memory_reg[257][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[258][31]_0   | contorller/memory_reg[258][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[269][31]_0   | contorller/memory_reg[269][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[263][31]_0   | contorller/memory_reg[263][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[266][31]_0   | contorller/memory_reg[266][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[267][31]_0   | contorller/memory_reg[267][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[262][31]_0   | contorller/memory_reg[262][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[264][31]     | contorller/memory_reg[264][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[265][31]_0   | contorller/memory_reg[265][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[268][31]     | contorller/memory_reg[268][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[271][31]_0   | contorller/memory_reg[271][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[275][31]_0   | contorller/memory_reg[275][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[276][31]     | contorller/memory_reg[276][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[277][31]_0   | contorller/memory_reg[277][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[278][31]_0   | contorller/memory_reg[278][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[273][31]_0   | contorller/memory_reg[273][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[274][31]     | contorller/memory_reg[274][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[270][31]     | contorller/memory_reg[270][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[27][31]_0    | contorller/memory_reg[27][31]             |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[282][31]     | contorller/memory_reg[282][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[283][31]     | contorller/memory_reg[283][0]             |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[284][31]     | contorller/memory_reg[284][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[281][31]     | contorller/memory_reg[281][0]             |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[285][31]_0   | contorller/memory_reg[285][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[279][31]_0   | contorller/memory_reg[279][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[280][31]     | contorller/memory_reg[280][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[287][31]_0   | contorller/memory_reg[287][0]_0           |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[286][31]_0   | contorller/memory_reg[286][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[297][31]     | contorller/memory_reg[297][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[295][31]     | contorller/memory_reg[295][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[292][31]     | contorller/memory_reg[292][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[291][31]     | contorller/memory_reg[291][0]             |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[294][31]     | contorller/memory_reg[294][0]             |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[289][31]_0   | contorller/memory_reg[289][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[290][31]     | contorller/memory_reg[290][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[293][31]     | contorller/memory_reg[293][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[288][31]     | contorller/memory_reg[288][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[296][31]_0   | contorller/memory_reg[296][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[300][31]_0   | contorller/memory_reg[300][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[298][31]_0   | contorller/memory_reg[298][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[299][31]     | contorller/memory_reg[299][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[301][31]     | contorller/memory_reg[301][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[302][31]     | contorller/memory_reg[302][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[441][31]_0   | contorller/memory_reg[441][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[440][31]     | contorller/memory_reg[440][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[442][31]     | contorller/memory_reg[442][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[444][31]_0   | contorller/memory_reg[444][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[445][31]_0   | contorller/memory_reg[445][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[446][31]_0   | contorller/memory_reg[446][0]_0           |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[448][31]_0   | contorller/memory_reg[448][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[447][31]     | contorller/memory_reg[447][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[461][31]_0   | contorller/memory_reg[461][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[460][31]_0   | contorller/memory_reg[460][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[449][31]_0   | contorller/memory_reg[449][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[456][31]     | contorller/memory_reg[456][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[459][31]_0   | contorller/memory_reg[459][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[455][31]_0   | contorller/memory_reg[455][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[458][31]_0   | contorller/memory_reg[458][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[450][31]_0   | contorller/memory_reg[450][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[453][31]_0   | contorller/memory_reg[453][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[451][31]_0   | contorller/memory_reg[451][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[454][31]_0   | contorller/memory_reg[454][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[452][31]_0   | contorller/memory_reg[452][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[457][31]_0   | contorller/memory_reg[457][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[467][31]_0   | contorller/memory_reg[467][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[465][31]_0   | contorller/memory_reg[465][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[468][31]     | contorller/memory_reg[468][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[462][31]_0   | contorller/memory_reg[462][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[464][31]     | contorller/memory_reg[464][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[470][31]     | contorller/memory_reg[470][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[469][31]     | contorller/memory_reg[469][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[466][31]_0   | contorller/memory_reg[466][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[472][31]_0   | contorller/memory_reg[472][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[463][31]_0   | contorller/memory_reg[463][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[473][31]_0   | contorller/memory_reg[473][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[474][31]     | contorller/memory_reg[474][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[475][31]_0   | contorller/memory_reg[475][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[471][31]     | contorller/memory_reg[471][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[476][31]     | contorller/memory_reg[476][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[477][31]     | contorller/memory_reg[477][0]_0           |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[479][31]_0   | contorller/memory_reg[479][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[478][31]_0   | contorller/memory_reg[478][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[480][31]_0   | contorller/memory_reg[480][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[481][31]     | contorller/memory_reg[481][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[483][31]_0   | contorller/memory_reg[483][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[485][31]_0   | contorller/memory_reg[485][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[486][31]_0   | contorller/memory_reg[486][0]_0           |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[484][31]_0   | contorller/memory_reg[484][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[482][31]_0   | contorller/memory_reg[482][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[488][31]_0   | contorller/memory_reg[488][0]_0           |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[487][31]_0   | contorller/memory_reg[487][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[491][31]     | contorller/memory_reg[491][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[492][31]_0   | contorller/memory_reg[492][31]            |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[495][31]     | contorller/memory_reg[495][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[489][31]_0   | contorller/memory_reg[489][0]_0           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[490][31]_0   | contorller/memory_reg[490][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[493][31]     | contorller/memory_reg[493][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[494][31]     | contorller/memory_reg[494][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[496][31]_0   | contorller/memory_reg[496][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[334][31]_0   | contorller/memory_reg[334][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[337][31]     | contorller/memory_reg[337][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[333][31]_0   | contorller/memory_reg[333][31]            |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[336][31]_0   | contorller/memory_reg[336][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[338][31]     | contorller/memory_reg[338][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[339][31]     | contorller/memory_reg[339][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[335][31]_0   | contorller/memory_reg[335][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[357][31]_0   | contorller/memory_reg[357][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[349][31]_0   | contorller/memory_reg[349][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[354][31]_0   | contorller/memory_reg[354][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[342][31]_0   | contorller/memory_reg[342][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[347][31]_0   | contorller/memory_reg[347][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[355][31]_0   | contorller/memory_reg[355][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[348][31]_0   | contorller/memory_reg[348][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[352][31]_0   | contorller/memory_reg[352][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[343][31]_0   | contorller/memory_reg[343][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[344][31]_0   | contorller/memory_reg[344][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[345][31]_0   | contorller/memory_reg[345][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[340][31]_0   | contorller/memory_reg[340][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[341][31]_0   | contorller/memory_reg[341][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[346][31]_0   | contorller/memory_reg[346][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[350][31]_0   | contorller/memory_reg[350][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[353][31]_0   | contorller/memory_reg[353][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[356][31]_0   | contorller/memory_reg[356][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[33][31]_0    | contorller/memory_reg[33][0]_0            |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[351][31]     | contorller/memory_reg[351][0]             |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[360][31]_0   | contorller/memory_reg[360][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[361][31]_0   | contorller/memory_reg[361][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[362][31]_0   | contorller/memory_reg[362][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[358][31]     | contorller/memory_reg[358][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[359][31]     | contorller/memory_reg[359][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[369][31]_0   | contorller/memory_reg[369][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[368][31]     | contorller/memory_reg[368][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[364][31]_0   | contorller/memory_reg[364][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[365][31]_0   | contorller/memory_reg[365][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[366][31]     | contorller/memory_reg[366][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[367][31]_0   | contorller/memory_reg[367][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[36][31]_0    | contorller/memory_reg[33][0]_0            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[370][31]_0   | contorller/memory_reg[370][0]_0           |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[372][31]_0   | contorller/memory_reg[372][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[374][31]     | contorller/memory_reg[374][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[373][31]_0   | contorller/memory_reg[373][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[375][31]     | contorller/memory_reg[375][0]_0           |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[376][31]     | contorller/memory_reg[376][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[382][31]     | contorller/memory_reg[382][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[388][31]_0   | contorller/memory_reg[388][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[377][31]_0   | contorller/memory_reg[377][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[386][31]_0   | contorller/memory_reg[386][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[389][31]_0   | contorller/memory_reg[389][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[390][31]     | contorller/memory_reg[390][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[391][31]_0   | contorller/memory_reg[391][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[392][31]_0   | contorller/memory_reg[392][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[384][31]_0   | contorller/memory_reg[384][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[383][31]     | contorller/memory_reg[383][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[387][31]_0   | contorller/memory_reg[387][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[378][31]_0   | contorller/memory_reg[378][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[379][31]_0   | contorller/memory_reg[379][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[380][31]_0   | contorller/memory_reg[380][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[381][31]_0   | contorller/memory_reg[381][31]            |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[385][31]_0   | contorller/memory_reg[385][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[399][31]_0   | contorller/memory_reg[399][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[396][31]     | contorller/memory_reg[396][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[394][31]_0   | contorller/memory_reg[394][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[397][31]_0   | contorller/memory_reg[397][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[404][31]     | contorller/memory_reg[404][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[401][31]     | contorller/memory_reg[401][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[405][31]_0   | contorller/memory_reg[405][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[403][31]     | contorller/memory_reg[403][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[400][31]_0   | contorller/memory_reg[400][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[398][31]_0   | contorller/memory_reg[398][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[395][31]_0   | contorller/memory_reg[395][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[39][31]_0    | contorller/memory_reg[39][31]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[402][31]_0   | contorller/memory_reg[402][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[393][31]_0   | contorller/memory_reg[393][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[406][31]_0   | contorller/memory_reg[406][0]_0           |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[407][31]     | contorller/memory_reg[407][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[410][31]     | contorller/memory_reg[410][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[413][31]     | contorller/memory_reg[413][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[411][31]_0   | contorller/memory_reg[411][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[409][31]     | contorller/memory_reg[409][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[412][31]_0   | contorller/memory_reg[412][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[408][31]_0   | contorller/memory_reg[408][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[417][31]_0   | contorller/memory_reg[417][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[419][31]_0   | contorller/memory_reg[419][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[41][31]      | contorller/memory_reg[41][0]              |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[418][31]     | contorller/memory_reg[418][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[421][31]_0   | contorller/memory_reg[421][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[415][31]     | contorller/memory_reg[415][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[416][31]_0   | contorller/memory_reg[416][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[420][31]_0   | contorller/memory_reg[420][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[423][31]     | contorller/memory_reg[423][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[424][31]_0   | contorller/memory_reg[424][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[427][31]_0   | contorller/memory_reg[427][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[426][31]_0   | contorller/memory_reg[426][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[425][31]_0   | contorller/memory_reg[425][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[422][31]_0   | contorller/memory_reg[422][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[429][31]_0   | contorller/memory_reg[429][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[42][31]_0    | contorller/memory_reg[42][31]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[428][31]_0   | contorller/memory_reg[428][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[430][31]     | contorller/memory_reg[430][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[432][31]_0   | contorller/memory_reg[432][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[431][31]_0   | contorller/memory_reg[431][31]_1          |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[433][31]_0   | contorller/memory_reg[433][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[434][31]_0   | contorller/memory_reg[434][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[436][31]_0   | contorller/memory_reg[436][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[435][31]_0   | contorller/memory_reg[435][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[437][31]_1   | contorller/memory_reg[437][31]_0          |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[438][31]_0   | contorller/memory_reg[438][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[439][31]_0   | contorller/memory_reg[439][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[590][31]     | contorller/memory_reg[590][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[58][31]      | contorller/memory_reg[58][0]              |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[589][31]     | contorller/memory_reg[589][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[591][31]_0   | contorller/memory_reg[591][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[599][31]     | contorller/memory_reg[599][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[603][31]_0   | contorller/memory_reg[603][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[602][31]     | contorller/memory_reg[602][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[596][31]_0   | contorller/memory_reg[596][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[604][31]_0   | contorller/memory_reg[604][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[601][31]_0   | contorller/memory_reg[601][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[595][31]     | contorller/memory_reg[595][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[59][31]_0    | contorller/memory_reg[59][31]             |               21 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[600][31]_0   | contorller/memory_reg[600][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[598][31]_0   | contorller/memory_reg[598][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[593][31]     | contorller/memory_reg[593][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[597][31]     | contorller/memory_reg[597][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[594][31]_0   | contorller/memory_reg[594][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[607][31]     | contorller/memory_reg[607][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[606][31]_0   | contorller/memory_reg[606][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[605][31]_0   | contorller/memory_reg[605][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[616][31]     | contorller/memory_reg[616][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[622][31]_0   | contorller/memory_reg[622][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[612][31]_0   | contorller/memory_reg[612][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[610][31]_0   | contorller/memory_reg[610][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[611][31]_0   | contorller/memory_reg[611][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[61][31]      | contorller/memory_reg[61][0]              |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[617][31]_0   | contorller/memory_reg[617][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[615][31]     | contorller/memory_reg[615][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[621][31]_0   | contorller/memory_reg[621][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[623][31]     | contorller/memory_reg[623][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[60][31]      | contorller/memory_reg[60][0]              |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[613][31]_0   | contorller/memory_reg[613][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[614][31]_0   | contorller/memory_reg[614][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[619][31]_0   | contorller/memory_reg[619][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[618][31]     | contorller/memory_reg[618][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[620][31]     | contorller/memory_reg[620][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[626][31]_0   | contorller/memory_reg[626][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[62][31]      | contorller/memory_reg[62][0]              |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[624][31]_0   | contorller/memory_reg[624][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[629][31]     | contorller/memory_reg[629][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[627][31]     | contorller/memory_reg[627][0]             |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[628][31]     | contorller/memory_reg[628][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[630][31]     | contorller/memory_reg[630][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[625][31]_0   | contorller/memory_reg[625][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[633][31]_0   | contorller/memory_reg[633][0]_0           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[631][31]_0   | contorller/memory_reg[631][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[632][31]     | contorller/memory_reg[632][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[636][31]     | contorller/memory_reg[636][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[635][31]     | contorller/memory_reg[635][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[634][31]     | contorller/memory_reg[634][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[637][31]     | contorller/memory_reg[637][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[498][31]_0   | contorller/memory_reg[498][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[499][31]     | contorller/memory_reg[499][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[497][31]_0   | contorller/memory_reg[497][0]_0           |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[501][31]_0   | contorller/memory_reg[501][0]_0           |               22 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[500][31]_0   | contorller/memory_reg[500][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[502][31]_0   | contorller/memory_reg[502][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[506][31]_0   | contorller/memory_reg[506][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[504][31]_0   | contorller/memory_reg[504][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[505][31]_0   | contorller/memory_reg[505][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[503][31]_1   | contorller/memory_reg[503][31]_0          |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[507][31]_0   | contorller/memory_reg[507][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[519][31]_0   | contorller/memory_reg[519][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[511][31]_0   | contorller/memory_reg[511][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[513][31]_0   | contorller/memory_reg[513][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[510][31]_0   | contorller/memory_reg[510][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[512][31]_0   | contorller/memory_reg[512][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[515][31]_0   | contorller/memory_reg[515][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[517][31]_0   | contorller/memory_reg[517][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[516][31]_0   | contorller/memory_reg[516][0]_0           |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[509][31]_0   | contorller/memory_reg[509][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[514][31]_0   | contorller/memory_reg[514][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[518][31]     | contorller/memory_reg[518][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[508][31]_0   | contorller/memory_reg[508][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[527][31]_0   | contorller/memory_reg[527][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[520][31]_0   | contorller/memory_reg[520][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[524][31]_0   | contorller/memory_reg[524][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[525][31]_0   | contorller/memory_reg[525][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[522][31]_0   | contorller/memory_reg[522][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[521][31]_0   | contorller/memory_reg[521][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[526][31]_0   | contorller/memory_reg[526][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[523][31]_0   | contorller/memory_reg[523][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[531][31]_0   | contorller/memory_reg[531][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[530][31]_0   | contorller/memory_reg[530][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[532][31]_0   | contorller/memory_reg[532][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[533][31]_0   | contorller/memory_reg[533][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[528][31]_0   | contorller/memory_reg[528][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[529][31]_1   | contorller/memory_reg[529][31]_0          |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[536][31]     | contorller/memory_reg[536][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[535][31]     | contorller/memory_reg[535][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[534][31]_0   | contorller/memory_reg[534][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[537][31]_0   | contorller/memory_reg[537][0]_0           |               24 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[544][31]     | contorller/memory_reg[544][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[541][31]     | contorller/memory_reg[541][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[540][31]_0   | contorller/memory_reg[540][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[538][31]_0   | contorller/memory_reg[538][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[539][31]_0   | contorller/memory_reg[539][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[543][31]_0   | contorller/memory_reg[543][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[545][31]     | contorller/memory_reg[545][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[542][31]_0   | contorller/memory_reg[542][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[546][31]_0   | contorller/memory_reg[546][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[548][31]_0   | contorller/memory_reg[548][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[547][31]     | contorller/memory_reg[547][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[549][31]_1   | contorller/memory_reg[549][31]_0          |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[550][31]_0   | contorller/memory_reg[550][0]_0           |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[54][31]_0    | contorller/memory_reg[54][31]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[552][31]_0   | contorller/memory_reg[552][0]_0           |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[551][31]     | contorller/memory_reg[551][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[55][31]      | contorller/memory_reg[55][0]              |               21 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[561][31]_0   | contorller/memory_reg[561][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[563][31]_0   | contorller/memory_reg[563][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[557][31]     | contorller/memory_reg[557][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[558][31]     | contorller/memory_reg[558][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[554][31]_0   | contorller/memory_reg[554][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[553][31]_1   | contorller/memory_reg[553][31]_0          |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[560][31]     | contorller/memory_reg[560][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[562][31]_0   | contorller/memory_reg[562][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[564][31]_0   | contorller/memory_reg[564][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[556][31]_0   | contorller/memory_reg[556][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[559][31]_0   | contorller/memory_reg[559][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[555][31]     | contorller/memory_reg[555][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[566][31]     | contorller/memory_reg[566][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[567][31]_0   | contorller/memory_reg[567][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[565][31]     | contorller/memory_reg[565][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[572][31]_0   | contorller/memory_reg[572][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[568][31]     | contorller/memory_reg[568][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[56][31]      | contorller/memory_reg[56][0]              |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[569][31]_0   | contorller/memory_reg[569][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[571][31]     | contorller/memory_reg[571][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[570][31]     | contorller/memory_reg[570][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[574][31]     | contorller/memory_reg[574][0]             |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[573][31]     | contorller/memory_reg[573][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[575][31]     | contorller/memory_reg[575][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[576][31]     | contorller/memory_reg[576][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[577][31]     | contorller/memory_reg[577][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[57][31]_0    | contorller/memory_reg[57][31]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[579][31]_0   | contorller/memory_reg[579][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[578][31]     | contorller/memory_reg[578][0]             |               22 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[581][31]_0   | contorller/memory_reg[581][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[582][31]_0   | contorller/memory_reg[582][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[583][31]     | contorller/memory_reg[583][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[584][31]_0   | contorller/memory_reg[584][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[585][31]_0   | contorller/memory_reg[585][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[586][31]_0   | contorller/memory_reg[586][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[588][31]     | contorller/memory_reg[588][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[587][31]_0   | contorller/memory_reg[587][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[63][31]      | contorller/memory_reg[63][0]              |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[644][31]_0   | contorller/memory_reg[644][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[643][31]_0   | contorller/memory_reg[643][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[646][31]_0   | contorller/memory_reg[646][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[639][31]_0   | contorller/memory_reg[639][31]            |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[642][31]     | contorller/memory_reg[642][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[640][31]_0   | contorller/memory_reg[640][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[641][31]_0   | contorller/memory_reg[641][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[645][31]_1   | contorller/memory_reg[645][31]_0          |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[653][31]_0   | contorller/memory_reg[653][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[649][31]     | contorller/memory_reg[649][0]             |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[648][31]_0   | contorller/memory_reg[648][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[64][31]      | contorller/memory_reg[64][0]              |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[651][31]     | contorller/memory_reg[651][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[650][31]_0   | contorller/memory_reg[650][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[655][31]     | contorller/memory_reg[655][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[656][31]_0   | contorller/memory_reg[656][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[652][31]_0   | contorller/memory_reg[652][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[647][31]_0   | contorller/memory_reg[647][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[654][31]_0   | contorller/memory_reg[654][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[657][31]_0   | contorller/memory_reg[657][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[658][31]_0   | contorller/memory_reg[658][0]_0           |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[659][31]     | contorller/memory_reg[659][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[660][31]_0   | contorller/memory_reg[660][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[661][31]_0   | contorller/memory_reg[661][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[65][31]_0    | contorller/memory_reg[65][31]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[663][31]_0   | contorller/memory_reg[663][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[664][31]_0   | contorller/memory_reg[664][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[662][31]_0   | contorller/memory_reg[662][0]_0           |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[665][31]_0   | contorller/memory_reg[665][0]_0           |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[666][31]_0   | contorller/memory_reg[666][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[668][31]_0   | contorller/memory_reg[668][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[66][31]      | contorller/memory_reg[66][0]              |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[667][31]     | contorller/memory_reg[667][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[670][31]_0   | contorller/memory_reg[670][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[669][31]_0   | contorller/memory_reg[669][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[675][31]_0   | contorller/memory_reg[675][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[677][31]_0   | contorller/memory_reg[677][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[680][31]     | contorller/memory_reg[680][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[671][31]     | contorller/memory_reg[671][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[674][31]_0   | contorller/memory_reg[674][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[673][31]     | contorller/memory_reg[673][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[676][31]_0   | contorller/memory_reg[676][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[679][31]     | contorller/memory_reg[679][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[672][31]_0   | contorller/memory_reg[672][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[67][31]_0    | contorller/memory_reg[67][31]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[681][31]     | contorller/memory_reg[681][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[678][31]_0   | contorller/memory_reg[678][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[682][31]     | contorller/memory_reg[682][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[683][31]_0   | contorller/memory_reg[683][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[684][31]     | contorller/memory_reg[684][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[685][31]     | contorller/memory_reg[685][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[686][31]     | contorller/memory_reg[686][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[688][31]_1   | contorller/memory_reg[688][31]_0          |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[689][31]_0   | contorller/memory_reg[689][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/branch                  | leddata/branch_counter/data_out_reg[31]_0 |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[687][31]_0   | contorller/memory_reg[687][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[690][31]     | contorller/memory_reg[690][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[692][31]     | contorller/memory_reg[692][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[693][31]_0   | contorller/memory_reg[693][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[691][31]     | contorller/memory_reg[691][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[698][31]     | contorller/memory_reg[698][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[699][31]_0   | contorller/memory_reg[699][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[694][31]     | contorller/memory_reg[694][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[696][31]     | contorller/memory_reg[696][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/jmp                     | leddata/branch_counter/data_out_reg[31]_0 |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[695][31]     | contorller/memory_reg[695][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[703][31]     | contorller/memory_reg[703][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[69][31]      | contorller/memory_reg[69][0]              |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[702][31]_0   | contorller/memory_reg[702][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[700][0]_0    | contorller/memory_reg[700][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[701][0]_0    | contorller/memory_reg[701][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[704][31]     | contorller/memory_reg[704][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[707][31]     | contorller/memory_reg[707][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[705][31]     | contorller/memory_reg[705][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[706][31]     | contorller/memory_reg[706][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[709][31]     | contorller/memory_reg[709][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[711][31]     | contorller/memory_reg[711][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[710][31]_0   | contorller/memory_reg[710][31]            |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[712][0]_0    | contorller/memory_reg[712][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[70][31]      | contorller/memory_reg[70][0]              |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[708][31]     | contorller/memory_reg[708][0]_0           |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[713][31]     | contorller/memory_reg[713][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[716][0]_0    | contorller/memory_reg[716][0]             |               23 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[717][0]_0    | contorller/memory_reg[717][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[718][0]_0    | contorller/memory_reg[718][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[714][31]     | contorller/memory_reg[714][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[715][31]     | contorller/memory_reg[715][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[727][0]_0    | contorller/memory_reg[727][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[729][0]_0    | contorller/memory_reg[729][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[724][0]_0    | contorller/memory_reg[724][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[71][31]      | contorller/memory_reg[71][0]              |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[725][0]_0    | contorller/memory_reg[725][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[720][0]_0    | contorller/memory_reg[720][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[728][0]_0    | contorller/memory_reg[728][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[72][31]_0    | contorller/memory_reg[72][31]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[722][0]_0    | contorller/memory_reg[722][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[719][31]     | contorller/memory_reg[719][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[721][0]_0    | contorller/memory_reg[721][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[723][31]_0   | contorller/memory_reg[723][0]_0           |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[726][31]     | contorller/memory_reg[726][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[730][31]     | contorller/memory_reg[730][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[732][31]     | contorller/memory_reg[732][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[731][31]     | contorller/memory_reg[731][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1002][31]_0  | contorller/memory_reg[1002][31]           |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[736][31]     | contorller/memory_reg[736][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[73][31]_0    | contorller/memory_reg[73][31]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[741][31]_0   | contorller/memory_reg[741][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[740][31]_0   | contorller/memory_reg[740][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[742][0]_0    | contorller/memory_reg[742][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[743][31]_0   | contorller/memory_reg[743][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[734][31]     | contorller/memory_reg[734][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[738][0]_0    | contorller/memory_reg[738][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[733][31]_1   | contorller/memory_reg[733][31]_0          |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[739][0]_0    | contorller/memory_reg[739][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[735][31]     | contorller/memory_reg[735][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[746][0]_0    | contorller/memory_reg[746][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[744][31]_0   | contorller/memory_reg[744][0]_0           |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[745][31]     | contorller/memory_reg[745][0]             |               26 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[747][31]_0   | contorller/memory_reg[747][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[752][0]_0    | contorller/memory_reg[752][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[753][0]_0    | contorller/memory_reg[753][0]             |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[757][31]     | contorller/memory_reg[757][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[756][0]_0    | contorller/memory_reg[756][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[750][0]_0    | contorller/memory_reg[750][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[749][0]_0    | contorller/memory_reg[749][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[754][31]_0   | contorller/memory_reg[754][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[755][31]     | contorller/memory_reg[755][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[74][31]_0    | contorller/memory_reg[74][31]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[751][31]_0   | contorller/memory_reg[751][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[748][31]_0   | contorller/memory_reg[748][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[761][31]     | contorller/memory_reg[761][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[75][31]_5    | contorller/memory_reg[75][31]_4           |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[762][0]_0    | contorller/memory_reg[762][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[759][0]_0    | contorller/memory_reg[759][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[758][31]_0   | contorller/memory_reg[758][0]_0           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[760][0]_0    | contorller/memory_reg[760][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[767][0]_0    | contorller/memory_reg[767][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[768][31]_0   | contorller/memory_reg[768][31]            |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[763][0]_0    | contorller/memory_reg[763][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[764][0]_1    | contorller/memory_reg[764][0]_0           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[765][0]_0    | contorller/memory_reg[765][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[766][0]_0    | contorller/memory_reg[766][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[770][31]_0   | contorller/memory_reg[770][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[76][31]_0    | contorller/memory_reg[76][31]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[771][0]_0    | contorller/memory_reg[771][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[772][31]     | contorller/memory_reg[772][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[773][31]     | contorller/memory_reg[773][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[769][31]     | contorller/memory_reg[769][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[774][31]_0   | contorller/memory_reg[774][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[775][0]_0    | contorller/memory_reg[775][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[779][0]_0    | contorller/memory_reg[779][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[776][0]_0    | contorller/memory_reg[776][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[777][31]_0   | contorller/memory_reg[777][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[778][31]_0   | contorller/memory_reg[778][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[783][31]_0   | contorller/memory_reg[783][31]            |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[780][31]     | contorller/memory_reg[780][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[784][31]     | contorller/memory_reg[784][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[782][31]     | contorller/memory_reg[782][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[77][31]      | contorller/memory_reg[77][0]              |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[781][31]_0   | contorller/memory_reg[781][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[787][31]     | contorller/memory_reg[787][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[789][0]_0    | contorller/memory_reg[789][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[788][31]     | contorller/memory_reg[788][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[786][31]     | contorller/memory_reg[786][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[785][31]_0   | contorller/memory_reg[785][0]_0           |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[638][31]     | contorller/memory_reg[638][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[80][31]_0    | contorller/memory_reg[80][31]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[808][31]_0   | contorller/memory_reg[808][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[809][31]_0   | contorller/memory_reg[809][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[817][31]     | contorller/memory_reg[817][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[813][31]     | contorller/memory_reg[813][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[812][31]     | contorller/memory_reg[812][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[814][31]     | contorller/memory_reg[814][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[811][31]_0   | contorller/memory_reg[811][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[816][31]     | contorller/memory_reg[816][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[810][31]     | contorller/memory_reg[810][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[815][31]_0   | contorller/memory_reg[815][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[81][31]_0    | contorller/memory_reg[81][31]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[820][31]     | contorller/memory_reg[820][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[819][31]_0   | contorller/memory_reg[819][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[821][31]     | contorller/memory_reg[821][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[818][31]_0   | contorller/memory_reg[818][0]_0           |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[832][31]_0   | contorller/memory_reg[832][31]            |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[823][31]_0   | contorller/memory_reg[823][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[825][31]_0   | contorller/memory_reg[825][31]            |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[829][31]     | contorller/memory_reg[829][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[834][0]_0    | contorller/memory_reg[834][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[828][31]     | contorller/memory_reg[828][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[835][31]_0   | contorller/memory_reg[835][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[836][31]_0   | contorller/memory_reg[836][31]            |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[833][31]_0   | contorller/memory_reg[833][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[827][31]_0   | contorller/memory_reg[827][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1001][31]_0  | contorller/memory_reg[1001][0]_0          |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[82][31]_0    | contorller/memory_reg[82][31]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[830][31]     | contorller/memory_reg[830][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[824][31]     | contorller/memory_reg[824][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[826][31]     | contorller/memory_reg[826][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[831][31]     | contorller/memory_reg[831][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1000][31]_0  | contorller/memory_reg[1000][31]           |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1003][31]    | contorller/memory_reg[1003][0]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[837][0]_0    | contorller/memory_reg[837][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[838][31]_0   | contorller/memory_reg[838][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[839][31]     | contorller/memory_reg[839][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[83][31]_0    | contorller/memory_reg[83][31]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[841][0]_0    | contorller/memory_reg[841][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[844][31]_1   | contorller/memory_reg[844][31]_0          |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[843][31]_0   | contorller/memory_reg[843][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[850][31]_0   | contorller/memory_reg[850][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[852][31]     | contorller/memory_reg[852][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[84][31]      | contorller/memory_reg[84][0]              |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[842][31]_0   | contorller/memory_reg[842][0]_0           |               28 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[846][31]_0   | contorller/memory_reg[846][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[847][31]_0   | contorller/memory_reg[847][31]            |               22 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[851][31]_0   | contorller/memory_reg[851][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[845][31]     | contorller/memory_reg[845][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[855][31]_0   | contorller/memory_reg[855][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[857][31]_0   | contorller/memory_reg[857][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[854][31]_1   | contorller/memory_reg[854][31]_0          |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[858][31]_0   | contorller/memory_reg[858][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[856][31]_0   | contorller/memory_reg[856][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[859][31]_0   | contorller/memory_reg[859][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[85][31]      | contorller/memory_reg[85][0]              |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[860][31]_0   | contorller/memory_reg[860][31]            |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[853][31]_0   | contorller/memory_reg[853][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[867][31]_0   | contorller/memory_reg[867][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[864][31]_0   | contorller/memory_reg[864][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[865][31]     | contorller/memory_reg[865][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[862][31]_0   | contorller/memory_reg[862][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[866][31]_0   | contorller/memory_reg[866][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[861][31]_0   | contorller/memory_reg[861][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[863][31]_0   | contorller/memory_reg[863][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[870][31]     | contorller/memory_reg[870][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[871][31]     | contorller/memory_reg[871][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[86][31]_0    | contorller/memory_reg[86][31]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[869][31]_0   | contorller/memory_reg[869][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[868][31]     | contorller/memory_reg[868][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[872][31]     | contorller/memory_reg[872][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[874][31]     | contorller/memory_reg[874][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[877][31]     | contorller/memory_reg[877][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[876][31]     | contorller/memory_reg[876][0]             |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[878][31]_0   | contorller/memory_reg[878][0]_0           |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[875][31]     | contorller/memory_reg[875][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[873][31]     | contorller/memory_reg[873][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[880][31]     | contorller/memory_reg[880][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[87][31]_0    | contorller/memory_reg[87][31]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[879][31]     | contorller/memory_reg[879][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[881][31]_0   | contorller/memory_reg[881][0]_0           |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[882][31]_0   | contorller/memory_reg[882][0]_0           |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[883][31]     | contorller/memory_reg[883][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[885][31]_0   | contorller/memory_reg[885][0]_0           |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[884][31]     | contorller/memory_reg[884][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[889][31]_0   | contorller/memory_reg[889][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[887][31]     | contorller/memory_reg[887][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[88][31]      | contorller/memory_reg[88][0]              |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[886][31]     | contorller/memory_reg[886][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[890][31]_1   | contorller/memory_reg[890][31]_0          |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[888][31]_0   | contorller/memory_reg[888][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[904][31]_0   | contorller/memory_reg[904][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[895][31]_0   | contorller/memory_reg[895][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[900][31]_0   | contorller/memory_reg[900][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[903][0]_0    | contorller/memory_reg[903][0]             |               22 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[893][31]_0   | contorller/memory_reg[893][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[894][31]_0   | contorller/memory_reg[894][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[898][31]_0   | contorller/memory_reg[898][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[897][31]_0   | contorller/memory_reg[897][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[902][31]_0   | contorller/memory_reg[902][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[892][31]_0   | contorller/memory_reg[892][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[89][31]      | contorller/memory_reg[89][0]              |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[896][31]     | contorller/memory_reg[896][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[899][31]_0   | contorller/memory_reg[899][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[905][31]     | contorller/memory_reg[905][0]_0           |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[891][31]_0   | contorller/memory_reg[891][31]            |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[901][31]_0   | contorller/memory_reg[901][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[912][31]     | contorller/memory_reg[912][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[90][31]      | contorller/memory_reg[90][0]              |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[909][31]_0   | contorller/memory_reg[909][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[910][31]     | contorller/memory_reg[910][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[911][31]_0   | contorller/memory_reg[911][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[913][0]_0    | contorller/memory_reg[913][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[907][31]_0   | contorller/memory_reg[907][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[908][31]     | contorller/memory_reg[908][0]_1           |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[906][31]_0   | contorller/memory_reg[906][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[914][31]_0   | contorller/memory_reg[914][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[917][31]     | contorller/memory_reg[917][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[918][31]_0   | contorller/memory_reg[918][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[915][31]     | contorller/memory_reg[915][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[919][0]_0    | contorller/memory_reg[919][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[916][31]_0   | contorller/memory_reg[916][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[91][31]      | contorller/memory_reg[91][0]              |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[920][31]     | contorller/memory_reg[920][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[923][31]     | contorller/memory_reg[923][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[924][31]_0   | contorller/memory_reg[924][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[928][31]_0   | contorller/memory_reg[928][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[926][31]_0   | contorller/memory_reg[926][31]            |               21 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[925][31]_0   | contorller/memory_reg[925][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[929][31]     | contorller/memory_reg[929][0]             |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[922][31]     | contorller/memory_reg[922][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[927][31]     | contorller/memory_reg[927][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1006][31]_0  | contorller/memory_reg[1006][31]           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[931][0]_0    | contorller/memory_reg[931][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[92][31]      | contorller/memory_reg[92][0]              |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[930][31]_0   | contorller/memory_reg[930][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[934][31]_0   | contorller/memory_reg[934][31]            |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[933][31]_0   | contorller/memory_reg[933][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[932][31]     | contorller/memory_reg[932][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[935][31]     | contorller/memory_reg[935][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[790][31]     | contorller/memory_reg[790][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[791][31]     | contorller/memory_reg[791][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[78][31]      | contorller/memory_reg[78][0]              |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[792][31]_1   | contorller/memory_reg[792][31]_0          |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[795][31]     | contorller/memory_reg[795][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[794][31]_1   | contorller/memory_reg[794][31]_0          |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[793][31]     | contorller/memory_reg[793][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[798][0]_0    | contorller/memory_reg[798][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[796][31]_1   | contorller/memory_reg[796][31]_0          |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[797][31]_0   | contorller/memory_reg[797][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[799][31]     | contorller/memory_reg[799][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[79][31]_0    | contorller/memory_reg[79][31]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[804][31]     | contorller/memory_reg[804][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[802][31]     | contorller/memory_reg[802][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[803][31]     | contorller/memory_reg[803][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[822][31]     | contorller/memory_reg[822][0]             |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[805][31]     | contorller/memory_reg[805][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[807][31]     | contorller/memory_reg[807][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[800][31]     | contorller/memory_reg[800][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[806][31]     | contorller/memory_reg[806][0]             |               14 |             32 |
+|  clk_BUFG                         | contorller/E[0]                    | leddata/branch_counter/data_out_reg[31]_0 |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[0][31]_0[0]  |                                           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[10][31][0]   |                                           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[12][31][0]   |                                           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[11][31][0]   |                                           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[13][31][0]   |                                           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[17][31][0]   |                                           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[18][31]_0[0] |                                           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[19][31][0]   |                                           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1][31][0]    |                                           |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[21][31][0]   |                                           |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[20][31][0]   |                                           |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[23][31][0]   |                                           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[22][31]_0[0] |                                           |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[24][31][0]   |                                           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[25][31][0]   |                                           |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[26][31][0]   |                                           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[28][31][0]   |                                           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[940][31]_0   | contorller/memory_reg[940][0]_0           |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[936][31]     | contorller/memory_reg[936][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[939][31]_0   | contorller/memory_reg[939][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[937][31]_0   | contorller/memory_reg[937][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[938][31]_0   | contorller/memory_reg[938][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[93][31]      | contorller/memory_reg[93][0]              |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[945][31]     | contorller/memory_reg[945][0]             |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[943][31]     | contorller/memory_reg[943][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[944][31]_0   | contorller/memory_reg[944][31]            |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[941][31]     | contorller/memory_reg[941][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1007][31]_0  | contorller/memory_reg[1007][31]           |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[942][31]_0   | contorller/memory_reg[942][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[94][31]      | contorller/memory_reg[94][0]              |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[950][31]_0   | contorller/memory_reg[950][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[951][31]_0   | contorller/memory_reg[951][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[949][31]     | contorller/memory_reg[949][0]_0           |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[947][31]_0   | contorller/memory_reg[947][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[948][31]_0   | contorller/memory_reg[948][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[952][31]     | contorller/memory_reg[952][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[954][31]_0   | contorller/memory_reg[954][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[955][31]     | contorller/memory_reg[955][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[953][31]_0   | contorller/memory_reg[953][31]            |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[957][31]     | contorller/memory_reg[957][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[956][31]     | contorller/memory_reg[956][0]             |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[958][31]     | contorller/memory_reg[958][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[95][31]      | contorller/memory_reg[95][0]              |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[960][31]     | contorller/memory_reg[960][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[959][31]     | contorller/memory_reg[959][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[964][31]_0   | contorller/memory_reg[964][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[967][31]_0   | contorller/memory_reg[967][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[974][31]_0   | contorller/memory_reg[974][31]            |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[975][31]_0   | contorller/memory_reg[975][0]_0           |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[972][31]_0   | contorller/memory_reg[972][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[96][31]_0    | contorller/memory_reg[96][31]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[973][31]_0   | contorller/memory_reg[973][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[968][31]_0   | contorller/memory_reg[968][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[963][31]_0   | contorller/memory_reg[963][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[971][31]_0   | contorller/memory_reg[971][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[962][0]_0    | contorller/memory_reg[962][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[966][31]     | contorller/memory_reg[966][0]             |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[961][31]_0   | contorller/memory_reg[961][31]            |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[965][31]_0   | contorller/memory_reg[965][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[970][31]_0   | contorller/memory_reg[970][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[969][31]_0   | contorller/memory_reg[969][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[977][31]     | contorller/memory_reg[977][0]             |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[97][31]      | contorller/memory_reg[97][0]              |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[976][31]_0   | contorller/memory_reg[976][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[978][31]_0   | contorller/memory_reg[978][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[979][31]_0   | contorller/memory_reg[979][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[981][31]     | contorller/memory_reg[981][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[980][31]_0   | contorller/memory_reg[980][31]            |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[985][31]_0   | contorller/memory_reg[985][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[987][31]_0   | contorller/memory_reg[987][31]            |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[988][31]     | contorller/memory_reg[988][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[989][31]     | contorller/memory_reg[989][0]             |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[98][31]_0    | contorller/memory_reg[98][31]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[982][31]     | contorller/memory_reg[982][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[983][31]     | contorller/memory_reg[983][0]             |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[984][31]_0   | contorller/memory_reg[984][31]            |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[986][31]_0   | contorller/memory_reg[986][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[994][31]_0   | contorller/memory_reg[994][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[995][31]_0   | contorller/memory_reg[995][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[990][31]_0   | contorller/memory_reg[990][31]            |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[993][31]_0   | contorller/memory_reg[993][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[991][31]     | contorller/memory_reg[991][0]             |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[992][31]     | contorller/memory_reg[992][0]             |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[998][31]_0   | contorller/memory_reg[998][31]            |                8 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[997][31]     | contorller/memory_reg[997][0]             |                7 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[996][31]     | contorller/memory_reg[996][0]             |               13 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[99][31]_0    | contorller/memory_reg[99][31]             |               14 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[999][31]_0   | contorller/memory_reg[999][31]            |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[2][31][0]    |                                           |               10 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[29][31][0]   |                                           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[30][31][0]   |                                           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[31][31][0]   |                                           |               11 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[32][31][0]   |                                           |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[35][31][0]   |                                           |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[34][31][0]   |                                           |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[38][31][0]   |                                           |               18 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[37][31][0]   |                                           |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[3][31]_0[0]  |                                           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[40][31][0]   |                                           |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[44][31][0]   |                                           |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[43][31][0]   |                                           |               19 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[45][31][0]   |                                           |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[46][31][0]   |                                           |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[47][31][0]   |                                           |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[48][31][0]   |                                           |               20 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[49][31][0]   |                                           |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[50][31][0]   |                                           |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[4][31][0]    |                                           |                5 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[51][31][0]   |                                           |               17 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[52][31][0]   |                                           |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[53][31][0]   |                                           |               16 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[5][31][0]    |                                           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[6][31]_0[0]  |                                           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[7][31]_0[0]  |                                           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[848][31][0]  |                                           |               26 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[849][31][0]  |                                           |               23 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[8][31][0]    |                                           |                5 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[9][31]_0[0]  |                                           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1004][31]_0  | contorller/memory_reg[1004][31]           |                9 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1005][31]_0  | contorller/memory_reg[1005][0]_0          |               15 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[1010][31]_0  | contorller/memory_reg[1010][31]           |               12 |             32 |
+|  clk_BUFG                         | contorller/memory_reg[801][31]     | contorller/memory_reg[801][0]             |               12 |             32 |
+|  clk_N                            |                                    | leddata/branch_counter/data_out_reg[31]_0 |               23 |             50 |
+|  clk_BUFG                         | enable_pc/pc_enable_reg/E[0]       | leddata/branch_counter/data_out_reg[31]_0 |               20 |             64 |
+|  clk_BUFG                         | contorller/p_0_in                  |                                           |               12 |             96 |
++-----------------------------------+------------------------------------+-------------------------------------------+------------------+----------------+
+
+

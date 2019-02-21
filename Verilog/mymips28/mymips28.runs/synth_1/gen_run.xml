@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1550746116">
+  <File Type="PA-TCL" Name="MipsCPU_Top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="MipsCPU_Top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="MipsCPU_Top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="MipsCPU_Top.vds"/>
+  <File Type="RDS-UTIL" Name="MipsCPU_Top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="MipsCPU_Top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="MipsCPU_Top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="MipsCPU_Top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="MipsCPU_Top_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/Alu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/Alu.v"/>
+        <Attr Name="ImportTime" Val="1550675638"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/Compare.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/Compare.v"/>
+        <Attr Name="ImportTime" Val="1550653187"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/ControlUnit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/ControlUnit.v"/>
+        <Attr Name="ImportTime" Val="1550680995"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/Counter.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/Counter.v"/>
+        <Attr Name="ImportTime" Val="1550678851"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/Display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/Display.v"/>
+        <Attr Name="ImportTime" Val="1550711141"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/Divider.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/Divider.v"/>
+        <Attr Name="ImportTime" Val="1550676619"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/EnablePC.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/EnablePC.v"/>
+        <Attr Name="ImportTime" Val="1550660545"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/LedData.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/LedData.v"/>
+        <Attr Name="ImportTime" Val="1550662993"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/Mux.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/Mux.v"/>
+        <Attr Name="ImportTime" Val="1550666189"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/PC.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/PC.v"/>
+        <Attr Name="ImportTime" Val="1550667259"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/Ram.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/Ram.v"/>
+        <Attr Name="ImportTime" Val="1550649804"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/Reg.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/Reg.v"/>
+        <Attr Name="ImportTime" Val="1550678790"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/RegFile.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/RegFile.v"/>
+        <Attr Name="ImportTime" Val="1550668591"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/Rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/Rom.v"/>
+        <Attr Name="ImportTime" Val="1550661544"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/SignExt.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/SignExt.v"/>
+        <Attr Name="ImportTime" Val="1550660295"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS24/MipsCPU_Top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS24/MipsCPU_Top.v"/>
+        <Attr Name="ImportTime" Val="1550712512"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ComputerDesign/benchmark_ccmb_my.hex">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../benchmark_ccmb_my.hex"/>
+        <Attr Name="ImportTime" Val="1550546398"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="MipsCPU_Top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/ComputerDesign/Nexys4DDR_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Nexys4DDR_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1550715517"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
