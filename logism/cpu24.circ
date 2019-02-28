@@ -30474,7 +30474,6 @@ c 22100007 102020 20020022 c 22100008 102020 20020022
     </appear>
     <wire from="(680,360)" to="(680,370)"/>
     <wire from="(1030,730)" to="(1030,870)"/>
-    <wire from="(610,530)" to="(610,540)"/>
     <wire from="(630,730)" to="(630,870)"/>
     <wire from="(800,320)" to="(800,330)"/>
     <wire from="(870,790)" to="(870,800)"/>
@@ -30923,10 +30922,6 @@ c 22100007 102020 20020022 c 22100008 102020 20020022
       <a name="tristate" val="false"/>
       <a name="label" val="EX_isJump"/>
       <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(610,540)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="EX_isJump"/>
     </comp>
     <comp lib="0" loc="(1410,80)" name="Pin">
       <a name="facing" val="west"/>
