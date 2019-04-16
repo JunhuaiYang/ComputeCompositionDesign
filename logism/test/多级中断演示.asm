@@ -96,10 +96,12 @@ sub $s4,$s4,$s5      #循环次数递减
 bne $s4, $zero, IntLoop1
 
 MTC0 $0,$3	#开中断
+
 #EPC出栈$2
 lw $2,0($sp)
 addi $sp,$sp,4
 MTC0 $2,$2	#$2恢复EPC
+
 #屏蔽字出栈$1
 lw $1,0($sp)
 addi $sp,$sp,4
